@@ -1,0 +1,1172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+/* ========================================
+   1. GLOBAL SETTINGS
+======================================== */
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f5f1e7;
+  background: #09130f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #d8b86d;
+  outline-offset: 3px;
+}
+
+/* ========================================
+   2. MAIN APPLICATION
+======================================== */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 75% 15%, #1a392a 0%, transparent 38%),
+    #09130f;
+}
+
+/* ========================================
+   3. NAVIGATION BAR
+======================================== */
+
+.navbar {
+  height: 82px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff12;
+}
+
+.brand,
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c6a65b;
+  color: #d8b86d;
+  border-radius: 12px;
+}
+
+.gold {
+  color: #d8b86d;
+}
+
+.nav-status,
+.eyebrow {
+  color: #a6b3a9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.status-dot,
+.eyebrow span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c9aa61;
+  margin-right: 9px;
+}
+
+/* ========================================
+   4. HERO SECTION
+======================================== */
+
+.hero-section {
+  min-height: 440px;
+  padding: 70px 12% 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 7vw, 82px);
+  line-height: 1.05;
+  margin: 24px 0;
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+  color: #d5b46b;
+}
+
+.hero-description {
+  color: #a9b7ad;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 470px;
+}
+
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 32px;
+  color: #d5dcd6;
+  font-size: 12px;
+}
+
+.feature-row div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-row svg {
+  color: #d5b46b;
+}
+
+/* ========================================
+   5. BANK CARD VISUAL
+======================================== */
+
+.bank-visual {
+  width: 320px;
+  height: 300px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.visual-glow {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background: #c4a45c;
+  filter: blur(100px);
+  opacity: .15;
+}
+
+.bank-card {
+  position: relative;
+  width: 280px;
+  height: 190px;
+  padding: 23px;
+  border: 1px solid #bda15e;
+  border-radius: 16px;
+  background: linear-gradient(
+    140deg,
+    #244a36,
+    #10271c 65%,
+    #172e22
+  );
+  box-shadow: 0 25px 65px #0008;
+  transform: rotate(-7deg);
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d9bd7c;
+}
+
+.card-top span,
+.card-bottom span,
+.card-currency {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.card-line {
+  height: 1px;
+  background: #c4a45c55;
+  margin: 18px 0;
+}
+
+.card-balance {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.card-currency {
+  color: #a5b4a8;
+  margin-top: 2px;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 19px;
+  left: 23px;
+  right: 23px;
+}
+
+.coin {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #684d19;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f2d990, #b68a36);
+  border: 3px double #80632c;
+  box-shadow: 0 8px 20px #0008;
+}
+
+.coin-one {
+  width: 57px;
+  height: 57px;
+  right: 2px;
+  top: 35px;
+}
+
+.coin-two {
+  width: 43px;
+  height: 43px;
+  bottom: 23px;
+  left: 0;
+}
+
+/* ========================================
+   6. ACCESS SECTION
+======================================== */
+
+.access-section {
+  padding: 55px 12% 75px;
+  background: #0d1b14;
+  border-top: 1px solid #ffffff0d;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-heading > span {
+  color: #c9aa61;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  margin: 12px 0;
+}
+
+.section-heading p,
+.form-description {
+  color: #9eada2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   7. CREATE / JOIN ROOM CARDS
+======================================== */
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.choice-card {
+  text-align: left;
+  color: #f5f1e7;
+  padding: 30px;
+  border: 1px solid #ffffff18;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #172c20, #102017);
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-5px);
+  border-color: #c9aa61;
+}
+
+.choice-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #d8b86d;
+  background: #c9aa6115;
+}
+
+.choice-card h3 {
+  font-size: 20px;
+  margin: 24px 0 9px;
+}
+
+.choice-card p {
+  color: #9eada2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.choice-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  color: #d8b86d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* ========================================
+   8. ROOM ACCESS FORM
+======================================== */
+
+.access-form {
+  max-width: 440px;
+  width: 100%;
+  margin: auto;
+  padding: 30px;
+  background: #14271c;
+  border: 1px solid #ffffff20;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px #0003;
+}
+
+.back-link {
+  border: 0;
+  background: transparent;
+  color: #d8b86d;
+  padding: 0;
+  font-size: 13px;
+  transition: color .2s ease;
+}
+
+.back-link:hover {
+  color: #f2d990;
+}
+
+.access-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin: 22px 0 5px;
+}
+
+.access-form .form-description {
+  margin-bottom: 20px;
+}
+
+.access-form label {
+  display: block;
+  margin-top: 20px;
+  color: #d8b86d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.access-form input {
+  width: 100%;
+  display: block;
+  margin-top: 9px;
+  padding: 14px;
+  color: #fff;
+  background: #09130f;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color .2s ease;
+}
+
+.access-form input::placeholder {
+  color: #65766b;
+}
+
+.access-form input:focus {
+  border-color: #c9aa61;
+}
+
+.access-form input:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   9. SUBMIT BUTTON
+======================================== */
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: #c9aa61;
+  color: #101b13;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #e0c47e;
+  transform: translateY(-2px);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: .6;
+  cursor: wait;
+  transform: none;
+}
+
+/* ========================================
+   10. ERROR MESSAGE
+======================================== */
+
+.error-message {
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #a84c4c;
+  border-radius: 8px;
+  background: #5a202033;
+  color: #ffb4a9;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   11. SUCCESSFUL ROOM CREATION / JOIN
+======================================== */
+
+.room-code-display {
+  margin-top: 12px;
+  padding: 18px;
+  text-align: center;
+  border: 1px dashed #c9aa61;
+  border-radius: 10px;
+  color: #e3c77f;
+  background: #09130f;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 7px;
+  overflow-wrap: anywhere;
+}
+
+.access-form .choice-icon {
+  margin-bottom: 15px;
+}
+
+/* ========================================
+   12. FOOTER
+======================================== */
+
+.footer {
+  min-height: 75px;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #718277;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.footer-brand {
+  color: #d8b86d;
+}
+
+.footer > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ========================================
+   13. TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 950px) {
+  .hero-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .access-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .hero-content h1 {
+    font-size: 62px;
+  }
+
+  .bank-visual {
+    transform: scale(.9);
+  }
+}
+
+/* ========================================
+   14. MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 750px) {
+  .navbar {
+    height: 72px;
+    padding: 0 6%;
+  }
+
+  .brand {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-status {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-section {
+    padding: 55px 7% 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(48px, 12vw, 68px);
+  }
+
+  .hero-description {
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .feature-row {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .bank-visual {
+    transform: scale(.85);
+    margin: -10px 0;
+  }
+
+  .access-section {
+    padding: 45px 7%;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-card {
+    padding: 25px;
+  }
+
+  .access-form {
+    padding: 24px;
+  }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 25px 6%;
+  }
+}
+
+/* ========================================
+   15. SMALL MOBILE DEVICES
+======================================== */
+
+@media (max-width: 400px) {
+  .nav-status {
+    font-size: 7px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .feature-row {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .bank-visual {
+    transform: scale(.75);
+    margin: -25px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .access-form {
+    padding: 20px;
+  }
+
+  .room-code-display {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+}
+
+/* FINAL BANKING DASHBOARD */
+
+.dashboard {
+  min-height: 80vh;
+}
+
+.dashboard-top,
+.dashboard-heading,
+.history-heading,
+.room-banner,
+.room-code-row,
+.dashboard-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 15px 0 5px;
+}
+
+.room-banner {
+  margin: 30px 0;
+  padding: 22px;
+  border: 1px solid #c9aa6144;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #193a29, #102017);
+}
+
+.room-label,
+.seat-label,
+.player-role,
+.account-balance span {
+  color: #c9aa61;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.room-code-row strong {
+  font-size: 27px;
+  letter-spacing: 5px;
+  color: #e4ca83;
+}
+
+.room-code-row button,
+.refresh-button {
+  border: 1px solid #ffffff25;
+  background: #ffffff0b;
+  color: #e4ca83;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  color: #a9b7ad;
+  font-size: 12px;
+}
+
+.status-pill {
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: #ffffff12;
+}
+
+.status-pill.active {
+  color: #8ce0a8;
+  background: #1c633a55;
+}
+
+.status-pill.paused {
+  color: #f1cf80;
+  background: #8c681d44;
+}
+
+.status-pill.ended {
+  color: #ffaaaa;
+  background: #702d2d55;
+}
+
+.dashboard-heading {
+  margin: 35px 0 18px;
+}
+
+.dashboard-heading h2,
+.dashboard-panel h2,
+.history-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+}
+
+.dashboard-heading h2 svg,
+.dashboard-panel h2 svg,
+.history-heading h2 svg {
+  color: #d8b86d;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.player-card,
+.dashboard-panel {
+  padding: 22px;
+  background: linear-gradient(145deg, #172c20, #102017);
+  border: 1px solid #ffffff19;
+  border-radius: 13px;
+}
+
+.player-card.self-card {
+  border-color: #c9aa6177;
+}
+
+.player-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #c9aa6118;
+  color: #d8b86d;
+}
+
+.player-card h3 {
+  margin: 20px 0 7px;
+  font-size: 17px;
+}
+
+.player-role {
+  font-size: 9px;
+  color: #9eada2;
+}
+
+.balance-value {
+  margin: 22px 0 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(23px, 3vw, 31px);
+  color: #e3c77f;
+  overflow-wrap: anywhere;
+}
+
+.balance-value small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+}
+
+.empty-balance {
+  color: #66776b;
+}
+
+.player-online {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #9cbea4;
+  font-size: 11px;
+}
+
+.player-online span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #67ce8a;
+}
+
+.player-online.offline {
+  color: #8b988e;
+}
+
+.player-online.offline span {
+  background: #68736b;
+}
+
+.dashboard-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.dashboard-panel h2 {
+  margin: 0 0 10px;
+}
+
+.operation-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 22px 0;
+}
+
+.operation-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+  background: #09130f;
+  color: #a9b7ad;
+  font-size: 11px;
+}
+
+.operation-tabs button.active {
+  color: #e3c77f;
+  border-color: #c9aa61;
+  background: #c9aa6115;
+}
+
+.dashboard-panel label {
+  display: block;
+  margin-top: 18px;
+  color: #d8b86d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-panel input,
+.dashboard-panel select {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #ffffff20;
+  background: #09130f;
+  color: white;
+  outline: none;
+}
+
+.dashboard-panel select:focus,
+.dashboard-panel input:focus {
+  border-color: #c9aa61;
+}
+
+.dashboard-panel select option {
+  background: #102017;
+  color: white;
+}
+
+.host-controls {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.control-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  color: #e3c77f;
+  border: 1px solid #c9aa6155;
+  border-radius: 8px;
+  background: #c9aa6110;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.primary-control {
+  background: #c9aa61;
+  color: #101b13;
+}
+
+.danger-control {
+  border-color: #a84c4c77;
+  color: #ffaaaa;
+  background: #702d2d22;
+}
+
+.control-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.account-balance {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid #c9aa6144;
+  border-radius: 10px;
+  background: #09130f;
+}
+
+.account-balance strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 28px;
+  color: #e3c77f;
+}
+
+.history-panel {
+  margin-top: 24px;
+}
+
+.history-heading span {
+  color: #9eada2;
+  font-size: 11px;
+}
+
+.transaction-list {
+  margin-top: 18px;
+}
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ffffff12;
+}
+
+.transaction-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #c9aa6115;
+  color: #d8b86d;
+}
+
+.transaction-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.transaction-info strong,
+.transaction-info span,
+.transaction-info small {
+  display: block;
+}
+
+.transaction-info strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.transaction-info span {
+  margin-top: 4px;
+  color: #a9b7ad;
+  font-size: 11px;
+}
+
+.transaction-info small {
+  margin-top: 5px;
+  color: #738278;
+  font-size: 10px;
+}
+
+.transaction-amount {
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.transaction-amount.positive {
+  color: #8ce0a8;
+}
+
+.transaction-amount.negative {
+  color: #ffaaaa;
+}
+
+.empty-history {
+  padding: 35px;
+  text-align: center;
+  color: #829286;
+}
+
+.empty-history svg {
+  color: #c9aa61;
+}
+
+.success-message,
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.success-message {
+  color: #a5e6b7;
+  background: #1b56332c;
+  border: 1px solid #67ce8a55;
+}
+
+.dashboard-bottom {
+  margin-top: 22px;
+  color: #718277;
+  font-size: 10px;
+  flex-wrap: wrap;
+}
+
+.dashboard-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.spinning {
+  animation: refresh-spin 1s linear infinite;
+}
+
+@keyframes refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 750px) {
+  .dashboard-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .player-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-top {
+    align-items: flex-start;
+  }
+
+  .room-banner {
+    align-items: flex-start;
+  }
+
+  .room-code-row strong {
+    font-size: 22px;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 16px;
+  }
+
+  .transaction-row {
+    gap: 9px;
+  }
+
+  .transaction-amount {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .room-banner {
+    flex-direction: column;
+  }
+
+  .room-status {
+    align-items: flex-start;
+  }
+
+  .dashboard-panel {
+    padding: 17px;
+  }
+
+  .room-code-row strong {
+    letter-spacing: 3px;
+  }
+}
